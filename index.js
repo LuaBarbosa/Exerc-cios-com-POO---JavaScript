@@ -58,3 +58,11 @@ class Programa {
 }
 
 const programaX = new Programa(50, ["suspense"]);
+class Seriado extends Programa {
+  constructor(duracao, generos, numeroDeEpsodios, anoDeInicio, anoDeFim) {
+    super(duracao, generos);
+    this.numeroDeEpsodios = numeroDeEpsodios;
+    this.anoDeInicio = anoDeInicio;
+    this.anoDeFim = anoDeFim;
+  }
+}
