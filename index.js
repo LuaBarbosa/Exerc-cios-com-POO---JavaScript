@@ -38,20 +38,23 @@ class Bicicleta extends Veiculo {
   }
 }
 
-//usando composição:
+//questão 2
 
-function carros(classe) {
-  return class extends classe {
-    constructor(tipoDeCombustivel) {
-      super(Veiculo);
-      this.tipoDeCombustivel = tipoDeCombustivel;
-    }
-  };
+class Programa {
+  #tiposDeGenero;
+  #generos;
+  constructor(duracao, generos) {
+    this.#tiposDeGenero = ["ação", "comédia", "suspense", "drama", "terror"];
+    this.duracao = duracao;
+    this.generos = generos;
+  }
+  get generos() {
+    return this.generos;
+  }
+
+  set generos(generos) {
+    return this.#tiposDeGenero.includes(generos) ? generos : "Genero inválido";
+  }
 }
 
-function bike(classe1) {
-  return class extends classe1 {};
-}
-
-class Carro extends carros(Veiculo) {}
-const carro1 = new Carro();
+const programaX = new Programa(50, ["suspense"]);
