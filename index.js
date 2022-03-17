@@ -7,8 +7,6 @@ class Veiculo {
   }
 }
 
-//usando herança:
-
 class Carro extends Veiculo {
   #tipoDeCombustivelValido;
   constructor(rodas, usaCombustível, tipoDeCombustivel) {
@@ -93,3 +91,30 @@ const programaX = new Programa(50, ["suspense", "drama", "romance"]);
 const theOffice = new Seriado(22, ["comédia", "sátira"], 120, 2005, 2012);
 
 const naoOlhePraCima = new Filme(128, ["comédia", "suspense", "drama"]);
+
+//questões 3
+
+class Livro {
+  constructor(autor, ano) {
+    this.autor = autor;
+    this.ano = ano;
+  }
+}
+
+class Ebook extends Livro {
+  constructor(autor, ano, numeroDePaginas, NumeroDeCapitulos) {
+    super(autor, ano);
+    numeroDePaginas = numeroDePaginas;
+    NumeroDeCapitulos =
+      this.NumeroDeCapitulos < this.numeroDePaginas
+        ? this.NumeroDeCapitulos
+        : "Capítulos inválidos";
+  }
+}
+
+class AudioEbook extends Livro {
+  constructor(autor, ano, duracaoTotalEmMin) {
+    super(ano, autor);
+    this.duracaoTotalEmMin = duracaoTotalEmMin;
+  }
+}
