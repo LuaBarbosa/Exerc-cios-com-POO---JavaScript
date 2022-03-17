@@ -118,3 +118,38 @@ class AudioEbook extends Livro {
     this.duracaoTotalEmMin = duracaoTotalEmMin;
   }
 }
+
+
+//questão 4 
+
+class Dispositivo {
+	calcula()
+}
+
+function MixinIluminacao(superClasse){
+	return class extends superClasse{
+		ilumina(){}
+ }
+}
+
+function MixinAcessaInternet(superClasse){
+	return class extends superClasse{
+		acessaInternet(){}
+ }
+}
+
+function MixinIFotos(superClasse){
+	return class extends superClasse{
+		fotos(){}
+ }
+}
+
+function MixinPassos(superClasse){
+	return class extends superClasse{
+		passos(){}
+ }
+}
+
+class Relogio extends (MixinAcessaInternet(MixinPassos(Dispositivo))) {}
+class Celular extends (MixinAcessaInternet(MixinIluminacao(MixinIFotos(MixinPassos(Dispositivo))))) {}
+class Computador extends (MixinAcessaInternet(MixinIFotos(Dispositivo))){}
