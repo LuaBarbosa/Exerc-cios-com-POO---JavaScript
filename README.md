@@ -16,3 +16,19 @@ Construa uma classe Programa com as propriedades duracao e generos (ação, com�
 Questão 3 
 
 Crie uma classe Livro com as propriedades autor e ano. Crie também as classes Ebook e AudioBook que herdam de Livro. Ebook deve ter numero de páginas e número de capítulos. Já a classe AudioBook deve ter a duração total do áudio em minutos.
+
+
+Questão 4 
+
+Utilizando como base a classe:
+  Dispositivo: 
+  + calcula()
+Faça alguns mixins para as seguintes funcionalidades:
+  + ilumina()
+  + acessaInternet()
+  + tiraFoto()
+  + registraPassos()
+Para construir as seguintes classes:
+  Relogio: + calcula(), + acessaInternet(), + registraPassos()
+  Computador: + calcula(), + acessaInternet(), + tiraFoto()
+  Celular: + calcula(), + ilumina(), + acessaInternet(), + tiraFoto(), + registraPassos()
